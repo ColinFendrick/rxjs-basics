@@ -13,5 +13,8 @@ const observer = new Observable(
 );
 
 // subscribe(next, error, complete) callbacks
-export default observer.subscribe(x => console.log(x), (e) => console.log(e),
-	() => console.log('Observable is complete'));
+export default observer.subscribe(
+	x => console.log('execute-observable.js:', x),
+	(e) => console.log('execute-observable.js error:', e),
+	() => console.log('execute-observable.js completed: Observable is complete')
+);

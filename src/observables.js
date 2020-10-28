@@ -6,4 +6,4 @@ const observable = new Observable(
 	}
 );
 
-export default observable.subscribe(x => console.log(x));
+export default observable.subscribe(x => console.log('observables.js:', x));
