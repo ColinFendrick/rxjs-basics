@@ -2,11 +2,12 @@ var path = require('path');
 
 module.exports = {
 	entry: {
-		app: './src/testrx.js'
+		app: './index.js',
+		main: './src/index.js'
 	},
 	output: {
 		path: path.resolve(__dirname, 'dev'),
-		filename: 'main_bundle.js'
+		filename: '[name].bundle.js'
 	},
 	mode: 'development',
 	module: {
@@ -17,6 +18,14 @@ module.exports = {
 			options: {
 				presets: [
 					'@babel/preset-env'
+				],
+				plugins: [
+					[
+						'@babel/plugin-transform-runtime',
+						{
+							'regenerator': true
+						}
+					]
 				]
 			}
 		}]
