@@ -1,4 +1,4 @@
-import basics from './basics';
+// import basics from './basics';
 import executeObservable from './execute-observable';
 import observables from './observables';
 import operators from './operators';
@@ -8,3 +8,4 @@ import subscribe from './subscribe';
 import ajaxWithSubject from './ajaxWithSubject';
 import behaviorSubject from './behaviorSubject';
 import asyncSubject from './asyncSubject';
+import scheduler from './scheduler';
