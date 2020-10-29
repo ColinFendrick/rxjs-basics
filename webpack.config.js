@@ -2,8 +2,7 @@ var path = require('path');
 
 module.exports = {
 	entry: {
-		app: './index.js',
-		main: './src/index.js'
+		app: './index.js'
 	},
 	output: {
 		path: path.resolve(__dirname, 'dev'),

@@ -9,7 +9,7 @@ import { Subject  } from 'rxjs';
 
 // The object is an observer that has three methods − next(v) error(e) complete()
 const testSub = new Subject();
-const logger = msg => (v = '') => console.log(`${msg}${v}`); // create a currying function to handle the callback
+const logger = msg => (v = '') => console.log(`subjects.js: ${msg}${v}`); // create a currying function to handle the callback
 
 export default (() => {
 	testSub.subscribe({
