@@ -18,21 +18,30 @@
       "tab"
     ],
     "no-trailing-spaces": "error",
-    "comma-dangle": ["error", "never"],
+    "comma-dangle": [
+      "error",
+      "never"
+    ],
     "no-console": "off",
     "object-curly-spacing": [
       "error",
       "always",
       {
-        "arraysInObjects": false,
+        "arraysInObjects": true,
         "objectsInObjects": false
       }
     ],
-    "array-bracket-spacing": ["error", "never"],
-    "comma-spacing": ["error", {
-      "before": false,
-      "after": true
-    }],
+    "array-bracket-spacing": [
+      "error",
+      "never"
+    ],
+    "comma-spacing": [
+      "error",
+      {
+        "before": false,
+        "after": true
+      }
+    ],
     "no-unused-vars": "off",
     "linebreak-style": [
       "error",
@@ -42,17 +51,22 @@
       "error",
       "single"
     ],
-    "jsx-quotes": ["error", "prefer-single"],
     "semi": [
       "error",
       "always"
     ],
-    "eol-last": ["error", "always"],
-    "no-multiple-empty-lines": ["error", {
-      "max": 2,
-      "maxEOF": 0,
-      "maxBOF": 0
-    }],
+    "eol-last": [
+      "error",
+      "always"
+    ],
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 2,
+        "maxEOF": 0,
+        "maxBOF": 0
+      }
+    ],
     "space-infix-ops": [
       "error",
       {
