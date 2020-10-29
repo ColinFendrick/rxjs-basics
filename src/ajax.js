@@ -8,8 +8,11 @@ You will see 2 HttpHttp requests in the browser network tab.
 import { ajax } from 'rxjs/ajax';
 import { map } from 'rxjs/operators';
 
+import { logger } from './helpers';
+
 export default (() => {
+	const log = logger('ajax.js')();
 	const finalVal = ajax('https://jsonplaceholder.typicode.com/users').pipe(map(({ response }) => response));
-	finalVal.subscribe(a => console.log('ajax.js: ', a));
-	finalVal.subscribe(a => console.log('ajax.js: ', a));
+	finalVal.subscribe(log);
+	finalVal.subscribe(log);
 })();

@@ -1,5 +1,8 @@
 import { Observable } from 'rxjs';
 
+import { logger } from './helpers'
+const log = logger('execute-observable.js');
+
 const observer = new Observable(
 	async subscriber => {
 		try {
@@ -14,7 +17,7 @@ const observer = new Observable(
 
 // subscribe(next, error, complete) callbacks
 export default observer.subscribe(
-	x => console.log('execute-observable.js:', x),
-	(e) => console.log('execute-observable.js error:', e),
-	() => console.log('execute-observable.js completed: Observable is complete')
+	x => log()(x),
+	(e) => log('error:')(e),
+	() => log('Observable is complete')()
 );

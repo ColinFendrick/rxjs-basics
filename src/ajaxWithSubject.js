@@ -11,14 +11,17 @@ import { Subject } from 'rxjs';
 import { ajax } from 'rxjs/ajax';
 import { map } from 'rxjs/operators';
 
+import { logger } from './helpers';
+
 export default (() => {
+	const log = logger('ajaxWithSubject.js')();
 	const testSub = new Subject();
 
 	testSub.subscribe({
-		next: v => console.log(`ajaxWithSubject: ${v}`)
+		next: log
 	});
 	testSub.subscribe({
-		next: v => console.log(`ajaxWithSubject: ${v}`)
+		next: log
 	});
 
 	const finalVal = ajax('https://jsonplaceholder.typicode.com/users').pipe(map(({ response }) => response));

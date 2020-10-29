@@ -7,19 +7,21 @@ Similar functionality goes for subject too.
 
 import { Subject  } from 'rxjs';
 
+import { logger } from './helpers';
+
 // The object is an observer that has three methods − next(v) error(e) complete()
 const testSub = new Subject();
-const logger = msg => (v = '') => console.log(`subjects.js: ${msg}${v}`); // create a currying function to handle the callback
+
+const log = logger('subject.js');
 
 export default (() => {
 	testSub.subscribe({
-		// next: v => console.log(`first subscription - From Subject: ${v}`)
-		next: logger('first subscription: ')
+		next: log('first subscription: ')
 	});
 	testSub.subscribe({
-		next: logger('second subscription: '),
-		complete: logger('Subscription is completed'),
-		error: logger('Error occured: ')
+		next: log('second subscription: '),
+		complete: log('Subscription is completed'),
+		error: log('Error occured: ')
 	});
 
 	testSub.next('A');
