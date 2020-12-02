@@ -1,6 +1,6 @@
 // Behaviour subject will give you the latest value when called.
 import { BehaviorSubject } from 'rxjs';
-import { logger } from './helpers'
+import { logger } from './helpers';
 
 const behaviorSubject = new BehaviorSubject('Testing Behaviour Subject');
 // 0 is the initial value

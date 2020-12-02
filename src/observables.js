@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs';
 
-import { logger } from './helpers'
+import { logger } from './helpers';
 
 const observable = new Observable(
 	subscriber => {
